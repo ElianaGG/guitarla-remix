@@ -6,8 +6,8 @@ function Navegation() {
     <nav className="navegation">
             <Link to="/" className={location.pathname === "/" ? "active" : ""}>Inicio </Link>
             <Link to="/nosotros" className={location.pathname === "/nosotros" ? "active" : ""}>Nosotros</Link>
-            <Link to="/tienda" className={location.pathname === "/tienda" ? "active" : ""}>Tienda</Link>
-            <Link to="/blog" className={location.pathname === "/blog" ? "active" : ""}>Blog</Link>
+            <Link to="/guitarras" className={location.pathname === "/guitarras" ? "active" : ""}>Tienda</Link>
+            <Link to="/posts" className={location.pathname === "/posts" ? "active" : ""}>Blog</Link>
         </nav>
   )
 }

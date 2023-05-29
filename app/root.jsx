@@ -1,13 +1,13 @@
-import { Meta, Links, Outlet, Scripts, LiveReload } from "@remix-run/react";
-import styles from "./style/index.css";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import { Meta, Links, Outlet, Scripts, LiveReload, useRouteError, isRouteErrorResponse, Link } from "@remix-run/react";
+import styles from "~/styles/index.css";
+import Footer from "~/components/footer";
+import Header from "~/components/header";
 
 export function meta() {
   return [
-    { charset: "utf-8" },
-    { title: "Guitar - LA - Remix" },
-    { viewport: "width=device-width,initial-scale=1" },
+    { charset: "UFT-8" },
+    { title: "GuitarLA - Remix" },
+    { viewport: "width=device-width, initial-scale=1" },
   ];
 }
 
@@ -58,4 +58,16 @@ function Document({ children }) {
       </body>
     </html>
   );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError()
+  if(isRouteErrorResponse(error)){
+    return ( 
+      <Document>
+        <h3 className="error">{error.status} {error.statusText}</h3>
+        <Link className="error-enlace" to="/">Volver a página principal</Link>
+      </Document>
+    )
+  }
 }
