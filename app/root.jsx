@@ -1,11 +1,11 @@
 import { Meta, Links, Outlet, Scripts, LiveReload, useRouteError, isRouteErrorResponse, Link } from "@remix-run/react";
-import styles from "~/styles/index.css";
 import Footer from "~/components/footer";
 import Header from "~/components/header";
+import styles from "~/styles/index.css";
 
 export function meta() {
   return [
-    { charset: "UFT-8" },
+    { charset: "uft-8" },
     { title: "GuitarLA - Remix" },
     { viewport: "width=device-width, initial-scale=1" },
   ];
