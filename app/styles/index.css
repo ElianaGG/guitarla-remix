@@ -25,6 +25,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 [class*="contenedor"],
 main {
   width: min(95%, 120rem);
@@ -86,7 +87,8 @@ main {
 
 .header .navegation a:hover,
 .header .active {
-  background-color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transition: initial;
 }
 
 .header .navegation img{
@@ -119,11 +121,16 @@ main {
   }
 }
 
+
 .footer .navegation a, .footer .copyright {
   color: var(--white);
   font-size: 2rem;
   text-decoration: none;
   font-weight: 700;
+}
+
+.footer .navegation a:last-of-type{
+  display: none;
 }
 
 .footer .copyright {
@@ -157,8 +164,10 @@ main {
   font-weight: 900;
   transition-property: background-color;
   transition-duration: 360ms;
+  border-radius: 0.5rem;
 }
 
 .enlace:hover {
   background-color: var(--primary);
+  border-radius: 0.5rem;
 }
